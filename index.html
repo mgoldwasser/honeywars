@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Honey Wars: Protect your queen. Rule all.</title>
+<meta name="description" content="Honey Wars is a turn-based strategy game of bees, blossoms and royal ambition. Guard your Queen, grow your colony and outwit rival swarms. Free on iPhone.">
+<meta property="og:title" content="Honey Wars">
+<meta property="og:description" content="Protect your queen. Rule all. A turn-based bee strategy game for iPhone.">
+<meta property="og:image" content="assets/02-battle.jpg">
+<meta name="theme-color" content="#f6c445">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+@font-face { font-family: 'Lilita One'; src: url(assets/lilita.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 600; src: url(assets/nunito-600.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 700 900; src: url(assets/nunito-800.woff2) format('woff2'); font-display: swap; }
+:root { --bg:#fff8e6; --card:#ffffff; --fg:#3b1f00; --muted:#7a5a2e; --accent:#c97a00; --line:#f0dca8; --hi:#f6c445; --hero:#f6c445; --hero-fg:#3b1f00; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1d1408; --card:#2a1d0c; --fg:#fbecc8; --muted:#d0b483; --accent:#ffc94d; --line:#4a3515; color-scheme: dark } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 600 17px/1.6 Nunito, system-ui, -apple-system, sans-serif; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: 'Lilita One', 'Arial Rounded MT Bold', system-ui, sans-serif; font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; }
+a { color: var(--accent); font-weight: 800; }
+
+.hero { background: var(--hero); color: var(--hero-fg);
+  background-image: radial-gradient(circle at 20% 10%, #ffe08a 0, transparent 45%), radial-gradient(circle at 90% 80%, #f0a91c 0, transparent 50%); }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding-block: 56px 0; }
+.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.brand img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 6px 18px rgba(80,40,0,.3); }
+.brand span { font: 400 26px/1 'Lilita One', system-ui, sans-serif; }
+.hero h1 { font-size: clamp(40px, 7vw, 68px); }
+.hero p.lede { font-size: 19px; max-width: 34ch; margin: 14px 0 24px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 900; text-decoration: none; }
+.btn.dark { background: #3b1f00; color: #ffe9a8; }
+.btn.light { background: rgba(255,255,255,.55); color: #3b1f00; }
+.soon { font-size: 14px; font-weight: 800; opacity: .8; }
+.phone { justify-self: center; width: min(320px, 80vw); aspect-ratio: 1320/2868; max-width: 100%; border: 10px solid #2a1600; border-bottom: 0; border-radius: 44px 44px 0 0; overflow: hidden; box-shadow: 0 -10px 40px rgba(80,40,0,.25); background: #2a1600; }
+.phone img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+section { padding-block: 64px 0; }
+section h2 { font-size: clamp(30px, 4.5vw, 42px); color: var(--accent); margin-bottom: 8px; }
+section > .wrap > p { max-width: 62ch; margin: 0 0 24px; color: var(--muted); }
+.features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+.feat { background: var(--card); border: 2px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.feat h3 { font-size: 22px; margin-bottom: 6px; }
+.feat p { margin: 0; }
+.shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
+.shots figure { flex: 0 0 min(240px, 62vw); margin: 0; scroll-snap-align: start; }
+.shots img { width: 100%; aspect-ratio: 1320/2868; object-fit: cover; border-radius: 22px; border: 2px solid var(--line); display: block; }
+.shots figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; text-align: center; }
+.clans { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.clan { border-radius: 18px; padding: 18px 20px; color: #fff; }
+.clan h3 { font-size: 22px; } .clan p { margin: 4px 0 0; }
+.clan.gold { background: #b77900; } .clan.hornet { background: #b8322a; } .clan.bumble { background: #5c4bb0; }
+footer { margin-top: 72px; border-top: 2px solid var(--line); padding-block: 22px 40px; color: var(--muted); font-size: 15px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+footer nav { display: flex; gap: 18px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; padding-top: 36px; } .phone { width: min(280px, 76vw); } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="assets/icon.png" alt="" width="72" height="72"><span>Honey Wars</span></div>
+      <h1>Protect your queen. Rule all.</h1>
+      <p class="lede">A turn-based strategy game of bees, blossoms and royal ambition. Guard your Queen, grow your colony and bring down rival swarms.</p>
+      <div class="cta">
+        <span class="btn dark" id="store">Coming soon to the App Store</span>
+        <a class="btn light" href="https://claude.ai/artifact/Ci5GfqXSXTdAq9XByQq6Nu">Play in your browser</a>
+      </div>
+    </div>
+    <div class="phone"><img src="assets/02-battle.jpg" alt="A Honey Wars battle: bee armies, hives and honeycomb on a hex map"></div>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Every colony has a Queen</h2>
+    <p>Keep yours alive. Topple theirs. Quick battles against clever AI rivals, with no ads, no accounts and no tracking.</p>
+    <div class="features">
+      <div class="feat"><h3>Two roads to victory</h3><p>Hunt down every rival Queen, or raise a Princess on a Royal Cell and guard her for five turns to ascend.</p></div>
+      <div class="feat"><h3>Grow a colony</h3><p>Harvest flower clusters, claim hives, build comb walls and spend pollen on Evolutions.</p></div>
+      <div class="feat"><h3>Fair, readable combat</h3><p>See exactly what you deal and take before you commit. No hidden dice. Fill your Frenzy meter for a Swarm Strike.</p></div>
+      <div class="feat"><h3>A new battle every day</h3><p>The Daily Battle is the same map for everyone. Earn stars and climb the Game Center leaderboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Three clans</h2>
+    <p>Eleven castes of bee, from humble Workers to invisible Cuckoos and towering Juggernauts.</p>
+    <div class="clans">
+      <div class="clan gold"><h3>Golden Hive</h3><p>Honeybees. Sweet harvests and cheap hives.</p></div>
+      <div class="clan hornet"><h3>Hornet Horde</h3><p>Hornets. Predators that heal and earn on every kill.</p></div>
+      <div class="clan bumble"><h3>Bumble Clan</h3><p>Bumblebees. Thick fur and stubborn defense.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Take a look</h2>
+    <div class="shots">
+      <figure><img loading="lazy" src="assets/02-battle.jpg" alt="Battle on the hex map"><figcaption>Hold the line</figcaption></figure>
+      <figure><img loading="lazy" src="assets/03-attack.jpg" alt="Attack preview with damage numbers"><figcaption>Know every outcome</figcaption></figure>
+      <figure><img loading="lazy" src="assets/04-evolve.jpg" alt="Royal Chamber evolutions"><figcaption>Evolve your swarm</figcaption></figure>
+      <figure><img loading="lazy" src="assets/06-learn.jpg" alt="Guided tutorial"><figcaption>Learn in minutes</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Matthew Goldwasser</span>
+    <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+  </div>
+</footer>
+</body>
+</html>

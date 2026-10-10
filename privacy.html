@@ -1,0 +1,61 @@
+<meta charset="utf-8">
+<title>Honey Wars Privacy</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/icon.png">
+<style>
+@font-face { font-family: 'Lilita One'; src: url(assets/lilita.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 600; src: url(assets/nunito-600.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 700 900; src: url(assets/nunito-800.woff2) format('woff2'); font-display: swap; }
+:root { --bg:#fff8e6; --card:#ffffff; --fg:#3b1f00; --muted:#7a5a2e; --accent:#c97a00; --line:#f0dca8; --hi:#f6c445; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1d1408; --card:#2a1d0c; --fg:#fbecc8; --muted:#d0b483; --accent:#ffc94d; --line:#4a3515; --hi:#f6c445; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#1d1408; --card:#2a1d0c; --fg:#fbecc8; --muted:#d0b483; --accent:#ffc94d; --line:#4a3515; --hi:#f6c445; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 Nunito, system-ui, -apple-system, sans-serif; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 18px; padding-block: 28px 56px; }
+header { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 3px solid var(--hi); margin-bottom: 8px; }
+header svg { width: 52px; height: 52px; flex: none; }
+header a.home { display: contents; color: inherit; text-decoration: none; }
+h1 { font: 400 34px/1.1 'Lilita One', 'Arial Rounded MT Bold', system-ui, sans-serif; margin: 0; text-wrap: balance; }
+header small { display: block; color: var(--muted); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 12px; margin-top: 4px; }
+h2 { font: 400 22px/1.2 'Lilita One', 'Arial Rounded MT Bold', system-ui, sans-serif; margin: 30px 0 6px; color: var(--accent); text-wrap: balance; }
+p, li { max-width: 65ch; } ul { padding-left: 1.2em; } li { margin: 4px 0; }
+a { color: var(--accent); font-weight: 800; }
+.tldr { background: var(--card); border: 2px solid var(--line); border-radius: 14px; padding: 4px 18px; margin-top: 18px; }
+.mail { font-weight: 800; user-select: all; background: var(--card); border: 2px solid var(--line); border-radius: 8px; padding: 1px 8px; }
+.site-nav { margin-bottom: 6px; }
+footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 14px; }
+</style>
+<div class="wrap">
+<header><a class="home" href="./" aria-label="Honey Wars home"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l24 14v28L32 60 8 46V18z" fill="#f6c445" stroke="#8a4f00" stroke-width="3"/><ellipse cx="32" cy="36" rx="12" ry="14" fill="#ffb81c" stroke="#3b1f00" stroke-width="3"/><path d="M21 32h22M20 39h24" stroke="#3b1f00" stroke-width="4"/><path d="M24 16l4 6 4-7 4 7 4-6-2 9H26z" fill="#fff3b0" stroke="#8a4f00" stroke-width="2"/></svg></a><div><h1>Privacy Policy</h1><small>Honey Wars · Effective October 10, 2026</small></div></header>
+
+<div class="tldr"><p><b>Short version:</b> Honey Wars does not collect, sell or share your personal data. There are no ads, no analytics and no tracking. Your games and settings stay on your device.</p></div>
+
+<h2>Who we are</h2>
+<p>Honey Wars is made by Matthew Goldwasser, an independent developer ("we", "us"). Questions about this policy: <span class="mail">mwg2525@gmail.com</span></p>
+
+<h2>What the iPhone app stores</h2>
+<ul>
+<li><b>On your device only:</b> your settings (sound, hints, narrator, color options), tutorial progress, campaign level, saved scores and the name you choose. This is kept in the app's local storage. It never leaves your device through us, and deleting the app deletes it.</li>
+<li><b>Nothing on our servers.</b> We do not run servers for the app and do not receive any data from it.</li>
+<li>The app makes no network requests of its own. Fonts and all game files are built into the app.</li>
+</ul>
+
+<h2>Game Center (optional, run by Apple)</h2>
+<p>If you are signed in to Game Center, the app submits your scores to Apple's Game Center leaderboards and shows leaderboard entries from Apple. Apple handles this under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>; your Game Center nickname and scores are visible to other players according to your Game Center settings. We cannot see your Apple ID, email or contacts. You can sign out of Game Center in iPhone Settings and keep playing.</p>
+
+<h2>Narrator and haptics</h2>
+<p>The optional narrator uses your device's built-in text-to-speech voice. Vibration feedback uses your device's haptics. Neither sends anything anywhere.</p>
+
+<h2>Web version on claude.ai</h2>
+<p>A web version of Honey Wars runs as an artifact on claude.ai. There, the shared leaderboard stores the player name you type, your score and game details, linked to an anonymous viewer ID provided by claude.ai, so that others viewing the game can see the scoreboard. It is stored by Anthropic's artifact platform under <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic's Privacy Policy</a>. Don't use your real name if you don't want it shown. Email us to have an entry removed.</p>
+
+<h2>Children</h2>
+<p>Honey Wars is a general-audience game and is not directed to children under 13. We do not knowingly collect personal information from anyone, including children. If you believe a child's information is on a web leaderboard, email us and we will remove it.</p>
+
+<h2>Your rights</h2>
+<p>Because we hold no personal data from the app, there is nothing for us to access, correct or delete. For web leaderboard entries, or any privacy question, including requests under GDPR, UK GDPR or US state privacy laws, contact <span class="mail">mwg2525@gmail.com</span> and we will respond within 30 days.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we will update it here and change the effective date above. If the app ever starts collecting data, we will update this policy and the App Store privacy label first.</p>
+
+<footer><nav class="site-nav"><a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></nav>© 2026 Matthew Goldwasser · Honey Wars</footer>
+</div>

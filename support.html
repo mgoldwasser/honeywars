@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<title>Honey Wars Support</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/icon.png">
+<style>
+@font-face { font-family: 'Lilita One'; src: url(assets/lilita.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 600; src: url(assets/nunito-600.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: Nunito; font-weight: 700 900; src: url(assets/nunito-800.woff2) format('woff2'); font-display: swap; }
+:root { --bg:#fff8e6; --card:#ffffff; --fg:#3b1f00; --muted:#7a5a2e; --accent:#c97a00; --line:#f0dca8; --hi:#f6c445; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1d1408; --card:#2a1d0c; --fg:#fbecc8; --muted:#d0b483; --accent:#ffc94d; --line:#4a3515; --hi:#f6c445; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#1d1408; --card:#2a1d0c; --fg:#fbecc8; --muted:#d0b483; --accent:#ffc94d; --line:#4a3515; --hi:#f6c445; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 Nunito, system-ui, -apple-system, sans-serif; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 18px; padding-block: 28px 56px; }
+header { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 3px solid var(--hi); margin-bottom: 8px; }
+header svg { width: 52px; height: 52px; flex: none; }
+header a.home { display: contents; color: inherit; text-decoration: none; }
+h1 { font: 400 34px/1.1 'Lilita One', 'Arial Rounded MT Bold', system-ui, sans-serif; margin: 0; text-wrap: balance; }
+header small { display: block; color: var(--muted); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 12px; margin-top: 4px; }
+h2 { font: 400 22px/1.2 'Lilita One', 'Arial Rounded MT Bold', system-ui, sans-serif; margin: 30px 0 6px; color: var(--accent); text-wrap: balance; }
+p, li { max-width: 65ch; } ul { padding-left: 1.2em; } li { margin: 4px 0; }
+a { color: var(--accent); font-weight: 800; }
+.tldr { background: var(--card); border: 2px solid var(--line); border-radius: 14px; padding: 4px 18px; margin-top: 18px; }
+.mail { font-weight: 800; user-select: all; background: var(--card); border: 2px solid var(--line); border-radius: 8px; padding: 1px 8px; }
+.site-nav { margin-bottom: 6px; }
+footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 14px; }
+details { background: var(--card); border: 2px solid var(--line); border-radius: 12px; padding: 10px 16px; margin: 10px 0; }
+summary { font-weight: 800; cursor: pointer; }
+</style>
+<div class="wrap">
+<header><a class="home" href="./" aria-label="Honey Wars home"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l24 14v28L32 60 8 46V18z" fill="#f6c445" stroke="#8a4f00" stroke-width="3"/><ellipse cx="32" cy="36" rx="12" ry="14" fill="#ffb81c" stroke="#3b1f00" stroke-width="3"/><path d="M21 32h22M20 39h24" stroke="#3b1f00" stroke-width="4"/><path d="M24 16l4 6 4-7 4 7 4-6-2 9H26z" fill="#fff3b0" stroke="#8a4f00" stroke-width="2"/></svg></a><div><h1>Honey Wars Support</h1><small>Help, questions and bug reports</small></div></header>
+
+<div class="tldr"><p><b>Need help?</b> Email <span class="mail">mwg2525@gmail.com</span>. Tell us your iPhone model, iOS version, and what happened. A screenshot helps. We usually reply within a few days.</p></div>
+
+<h2>The basics</h2>
+<ul>
+<li><b>Protect your Queen.</b> Destroy every rival Queen to win. Lose yours and the game is over.</li>
+<li><b>Or ascend.</b> Lay a Princess on a Royal Cell and keep enemies away from her for 5 turns.</li>
+<li><b>Grow your colony.</b> Workers harvest flower clusters for nectar, claim hives and build comb.</li>
+<li>New? Open <b>How to play</b> and tap <b>Learn to play</b> for five short lessons with a narrator.</li>
+</ul>
+
+<h2>Questions</h2>
+<details><summary>What is the Daily Battle?</summary><p>One map a day, the same for everyone. Win fast with your Queen healthy for more stars and a higher score. A new map starts at midnight UTC.</p></details>
+<details><summary>Leaderboards aren't showing</summary><p>Leaderboards use Apple Game Center. Open iPhone Settings, then Game Center, and sign in. Then reopen Honey Wars. You can play without Game Center; your scores are still kept on your phone.</p></details>
+<details><summary>How do I turn off the narrator, hints or sound?</summary><p>Tap the menu button during a game, or open How to play from the title screen. Each one has its own switch.</p></details>
+<details><summary>Colors are hard to tell apart</summary><p>Turn on <b>Color-blind colors</b> in How to play or the game menu. It switches rival teams to colors that are easier to tell apart. The change shows from your next game.</p></details>
+<details><summary>Does the app collect my data?</summary><p>No. There are no ads, analytics or tracking. See the <a href="privacy.html" rel="noopener">privacy policy</a>.</p></details>
+<details><summary>Can I get my progress back after deleting the app?</summary><p>Progress is saved only on your device, so deleting the app erases it. Game Center scores stay with Apple.</p></details>
+
+<h2>Report a bug</h2>
+<p>Email <span class="mail">mwg2525@gmail.com</span> with what you tapped just before the problem. If the game seems stuck, open the menu and choose <b>Concede &amp; quit</b>; your settings and progress are kept.</p>
+
+<footer><nav class="site-nav"><a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></nav>© 2026 Matthew Goldwasser · Honey Wars · Use of the app is under Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Licensed Application End User License Agreement</a>.</footer>
+</div>
